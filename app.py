@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required, current_user, roles_required, hash_password
 from flask_mailman import Mail
+from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap5
 import config
 
@@ -9,6 +10,7 @@ app = Flask(__name__)
 Bootstrap5(app)
 app.config.from_object(config)
 db= SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 roles_users = db.Table('roles_users',
     db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
