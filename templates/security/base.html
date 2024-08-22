@@ -1,0 +1,67 @@
+{# djlint:off H030,H031 #}
+{% block doc -%}
+<!DOCTYPE html>
+<html{% block html_attribs %}{% endblock html_attribs %}>
+  {%- block html %}
+  <head>
+    {%- block head %}
+    <title>{% block title %}{{ title|default }}{% endblock title %}</title>
+
+      {%- block metas %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {%- endblock metas %}
+
+      {%- block head_scripts %}
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      {%- endblock head_scripts %}
+
+      {%- block styles %}
+        <style>
+          .fs-center { text-align: center }
+          .fs-important { font-size: larger; font-weight: bold }
+          .fs-gap { margin-top: 20px; }
+          .fs-div { margin: 4px; }
+          .fs-error-msg { color: darkred; }
+        </style>
+      {%- endblock styles %}
+    {%- endblock head %}
+  </head>
+  <body{% block body_attribs %}{% endblock body_attribs %}>
+    {% block body -%}
+      {% block navbar %}
+        <!-- Example Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">School Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">SMS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </nav>
+      {%- endblock navbar %}
+      {% block content -%}
+      {%- endblock content %}
+
+      {% block scripts %}
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      {%- endblock scripts %}
+    {%- endblock body %}
+  </body>
+  {%- endblock html %}
+</html>
+{% endblock doc -%}
