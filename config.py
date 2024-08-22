@@ -5,7 +5,7 @@ import os
 SECRET_KEY='xu4oGFjn1_6PkiydrZitCE9JIozEZv3jMrvHl0T66Pk'
 SECURITY_PASSWORD_SALT='250411626211731261460976096525945109056'
 
-database_url = os.environ.get('DATABASE_URL', 'postgres://default:7ZYwLXap4xlP@ep-raspy-lake-a4ot0dgi-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require')
+database_url = os.environ.get('DATABASE_URL', 'postgres://default:ipnRGZJk6hs8@ep-round-breeze-a4p0p7t0-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require')
 if database_url.startswith("postgres://"):
     database_url = database_url.replace("postgres://", "postgresql://", 1)
 
