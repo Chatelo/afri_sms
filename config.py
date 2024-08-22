@@ -13,7 +13,6 @@ SQLALCHEMY_DATABASE_URI = database_url
 
 # Database configuration
 # SQLALCHEMY_DATABASE_URI='postgresql://postgres@localhost:5432/sms'
-# SQLALCHEMY_DATABASE_URI='postgres://default:7ZYwLXap4xlP@ep-raspy-lake-a4ot0dgi-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require'
 # SQLALCHEMY_DATABASE_URI='postgresql://postgres:QsdQEVlCuBeuBcCmiHzXOTkkAESSNGzi@postgres.railway.internal:5432/railway'
 SQLALCHEMY_TRACK_MODIFICATIONS=False
 SQLALCHEMY_ENGINE_OPTIONS={"pool_pre_ping": True,}
