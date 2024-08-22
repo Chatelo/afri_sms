@@ -4,7 +4,8 @@ SECURITY_PASSWORD_SALT='250411626211731261460976096525945109056'
 
 # Database configuration
 # SQLALCHEMY_DATABASE_URI='postgresql://postgres@localhost:5432/sms'
-SQLALCHEMY_DATABASE_URI='postgresql://postgres:QsdQEVlCuBeuBcCmiHzXOTkkAESSNGzi@postgres.railway.internal:5432/railway'
+SQLALCHEMY_DATABASE_URI='postgres://default:7ZYwLXap4xlP@ep-raspy-lake-a4ot0dgi.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require'
+# SQLALCHEMY_DATABASE_URI='postgresql://postgres:QsdQEVlCuBeuBcCmiHzXOTkkAESSNGzi@postgres.railway.internal:5432/railway'
 SQLALCHEMY_TRACK_MODIFICATIONS=False
 SQLALCHEMY_ENGINE_OPTIONS={"pool_pre_ping": True,}
 
